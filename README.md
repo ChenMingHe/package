@@ -1,14 +1,17 @@
 package
 ===========
 
+获取依赖包
+----------
 Cloud Foundry使用Chef 方式安装的时候，需要从网上下载大量的源码包，这些源码包从国外网站下载的话速度很慢，用github要提高不少的速度
 使用命令:
 
     $ sudo mkdir /var/cache/dev_setup
     $ git clone git@github.com:ChenMingHe/package.git /var/cache/dev_setup
-
 耐心等待一段时间，之后再安装的时候就不会出现下载超时的问题了
 
+一些错误的处理
+--------------
 注意：因为otp_src_R14B01.tar.gz的安装需要gcc4.4的版本，如果在安装这个包的时候出现错误，请如下尝试：
 
 确认已经安装了gcc-4.4，不确定就运行下面的命令
